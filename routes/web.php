@@ -68,3 +68,16 @@ Route::get('api/users/{user}', function (App\User $user) {
 Route::get('admin/profile', function () {
     //
 })->middleware('mada');
+
+
+
+
+
+// 2016/12/15
+// blade 模板
+Route::get('view/greet',function(){
+    // return view('greeting',['name'=>'tests']);
+    return view('greeting')->with('name','mmp');
+});
+
+
